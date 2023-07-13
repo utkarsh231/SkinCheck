@@ -32,14 +32,14 @@ taken to rectify the problems will be seen. The following steps are given below:
 
 ➡️ Unawareness of skin cancer diseases among regular people. 
 
-☑️ The project helps people to classify skin cancer in one of the seven skin 
+   ☑️ The project helps people to classify skin cancer in one of the seven skin 
 lesions with the help of just one picture. The webpage also provides the 
 user with a link which redirects the user to Google for more information 
 on the specified type of skin lesion. 
 
 ➡️ Excessive Cost for skin cancer classification by clinicians. 
 
- ☑️ The web application is free to use and available for every user. Internet 
+   ☑️ The web application is free to use and available for every user. Internet 
 access is just required to get the most out of the project. 
 
 ➡️ Clinical Practices such as dermoscopy needs specialised training and experience. 
@@ -50,15 +50,15 @@ and verified by dermatologists. Section Dataset discusses it in brief.
 ➡️ Most research on Skin Cancer classification lacks effectiveness and displays 
 lower accuracy. 
 
- ☑️ Comparison of this study with other state-of-the-art approaches on the 
+   ☑️ Comparison of this study with other state-of-the-art approaches on the 
 same dataset showed the model used in the web application has shown 
 better results than others. 
 
-☑️ The model showed an accuracy of 87.89%. 
+   ☑️ The model showed an accuracy of 87.89%. 
 
 ➡️ The lack of appropriate resources for easy skin cancer detection. 
 
-☑️ Areas with lower medical advancements suffer from a lack of resources 
+   ☑️ Areas with lower medical advancements suffer from a lack of resources 
 for easy skin cancer detection. This model is free to use with a user-friendly UI. It can be accessed by any person and is easy to use. 
 
 🛠️The project is divided into two categories – AI and Web Technology. With the 
@@ -66,13 +66,20 @@ knowledge and literature survey of various Artificial Intelligence and Deep Lear
 architectures, a model will be developed to successfully classify skin cancer disease 
 using the help of labelled data from MNIST: HAM 10000. The initial part of the 
 research aims at using the following architectures apart from the basic CNN models– 
+
 ✔️ GoogLeNet 
+
 ✔️ AlexNet 
+
 After this, the concept of transfer learning was used on the dataset. It showed promising 
 results. The models used for that purpose are:- 
+
 ✔️ InceptionNetV3 
+
 ✔️ Xception Net 
+
 ✔️ InceptionResNetV2 
+
 The best-performing architecture was used in the latter part of the project. The Web 
 Technology part includes the development of a Web Application and the integration of 
 deep learning architecture with the application. An easy-to-use web design to make it 
