@@ -14,34 +14,50 @@ population, ultimately contributing to the betterment of society.
 The project focuses on the utilization of advanced deep learning techniques to develop an application capable of accurately classifying 
 skin cancer from user-uploaded images. This undertaking was motivated by several identified issues that hinder the efficient classification
 of skin cancer and could greatly benefit both society and researchers in the field. These include:- 
+
 ➡️Unawareness of skin cancer diseases among regular people. 
+
 ➡️Excessive Cost for skin cancer classification by clinicians. 
+
 ➡️Clinical Practices such as dermoscopy needs specialized training and experience. 
+
 ➡️Most research on Skin Cancer classification lacks effectiveness and displays lower accuracy. 
+
 ➡️The lack of appropriate resources for easy skin cancer detection. 
 
 
 ## 🔸Solution Strategy:-
 During problem definition, the main problems were discussed which occurred during the project. And in this section, the steps that were 
 taken to rectify the problems will be seen. The following steps are given below: 
+
 ➡️ Unawareness of skin cancer diseases among regular people. 
-     ☑️The project helps people to classify skin cancer in one of the seven skin 
+
+     ☑️ The project helps people to classify skin cancer in one of the seven skin 
 lesions with the help of just one picture. The webpage also provides the 
 user with a link which redirects the user to Google for more information 
 on the specified type of skin lesion. 
+
 ➡️ Excessive Cost for skin cancer classification by clinicians. 
+
       ☑️ The web application is free to use and available for every user. Internet 
 access is just required to get the most out of the project. 
+
 ➡️ Clinical Practices such as dermoscopy needs specialised training and experience. 
+
       ☑️ The dataset which has been used for the training of the models is labelled 
 and verified by dermatologists. Section Dataset discusses it in brief. 
+
 ➡️ Most research on Skin Cancer classification lacks effectiveness and displays 
 lower accuracy. 
+
       ☑️ Comparison of this study with other state-of-the-art approaches on the 
 same dataset showed the model used in the web application has shown 
 better results than others. 
+
       ☑️ The model showed an accuracy of 87.89%. 
+
 ➡️ The lack of appropriate resources for easy skin cancer detection. 
+
       ☑️ Areas with lower medical advancements suffer from a lack of resources 
 for easy skin cancer detection. This model is free to use with a user-friendly UI. It can be accessed by any person and is easy to use. 
 
