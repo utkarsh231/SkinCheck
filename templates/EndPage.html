@@ -1,0 +1,258 @@
+<head>
+  <title>SkinCheck</title>
+</head>
+<div class="div">
+  <a class="div-2 un" href="/" >SkinCheck</a>
+  <div class="div-3">
+    <div class="an-ai-powered-skin-cancer-dete">
+      An AI-Powered Skin Cancer Classification
+    </div>
+    <div class="div-4">
+      <div class="div-5" data-el="div-1">
+        <picture>
+          <source
+            srcset="
+              {{image_url}}?format=webp&width=100   100w,
+              {{image_url}}?format=webp&width=200   200w,
+              {{image_url}}?format=webp&width=400   400w,
+              {{image_url}}?format=webp&width=800   800w,
+              {{image_url}}?format=webp&width=1200 1200w,
+              {{image_url}}?format=webp&width=1600 1600w,
+              {{image_url}}?format=webp&width=2000 2000w,
+              {{image_url}}
+            "
+            type="image/webp"
+          />
+          <img
+            loading="lazy"
+            src="{{image_url}}"
+            srcset="
+              {{image_url}}?width=100   100w,
+              {{image_url}}?width=200   200w,
+              {{image_url}}?width=400   400w,
+              {{image_url}}?width=800   800w,
+              {{image_url}}?width=1200 1200w,
+              {{image_url}}?width=1600 1600w,
+              {{image_url}}?width=2000 2000w,
+              {{image_url}}
+            "
+            class="image"
+          />
+        </picture>
+        <div class="builder-image-sizer image-sizer"></div>
+      </div>
+      {% if prediction %} 
+        <button
+          class="a un"
+          data-el="a-1"
+          style="border: none; background-color: white;"
+        >
+          {{prediction}}
+        </button>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .un {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    position: relative;
+  }
+  .un:visited {
+    color: black;
+  }
+  .un::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .un:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .div {
+    display: flex;
+    flex-direction: column;
+    max-width: 1728px;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .div-2 {
+    display: flex;
+    width: 100vw;
+    background-color: rgba(217, 217, 217, 1);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    color: rgba(0, 0, 0, 1);
+    font-size: 32px;
+    letter-spacing: 0%;
+    text-align: left;
+    font-family: "Product Sans", sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-2 {
+      width: 100vw;
+    }
+  }
+  .div-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 928px;
+    justify-content: flex-start;
+    margin-top: 60px;
+  }
+  @media (max-width: 640px) {
+    .div-3 {
+      margin-top: 50px;
+    }
+  }
+  .an-ai-powered-skin-cancer-dete {
+    max-width: 928px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 60px;
+    letter-spacing: 0%;
+    text-align: center;
+    font-family: "Product Sans", sans-serif;
+  }
+  @media (max-width: 991px) {
+    .an-ai-powered-skin-cancer-dete {
+      font-size: 50px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+  @media (max-width: 640px) {
+    .an-ai-powered-skin-cancer-dete {
+      font-size: 40px;
+    }
+  }
+  .div-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .div-5 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 250px;
+    overflow: hidden;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+  }
+  @media (max-width: 991px) {
+    .div-5 {
+      width: 220px;
+      border-width: 3px;
+    }
+  }
+  @media (max-width: 640px) {
+    .div-5 {
+      width: 175px;
+      border-width: 2px;
+    }
+  }
+  .image {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .image-sizer {
+    width: 100%;
+    padding-top: 98.9%;
+    pointer-events: none;
+    font-size: 0;
+  }
+  .a {
+    margin-top: 40px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 40px;
+    letter-spacing: 0%;
+    text-align: center;
+    font-family: "Product Sans", sans-serif;
+    cursor: pointer;
+    pointer-events: auto;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .a {
+      font-size: 35px;
+    }
+  }
+  @media (max-width: 640px) {
+    .a {
+      font-size: 30px;
+    }
+  }
+</style>
+<script>
+  (() => {
+    const state = {};
+
+    let context = null;
+    let nodesToDestroy = [];
+    let pendingUpdate = false;
+  
+    function destroyAnyNodes() {
+      // destroy current view template refs before rendering again
+      nodesToDestroy.forEach((el) => el.remove());
+      nodesToDestroy = [];
+    }
+  
+    // Function to update data bindings and loops
+    // call update() when you mutate state and need the updates to reflect
+    // in the dom
+    function update() {
+      if (pendingUpdate === true) {
+        return;
+      }
+      pendingUpdate = true;
+  
+      document.querySelectorAll("[data-el='a-1']").forEach((el) => {
+        el.removeEventListener("click", onA1Click);
+        el.addEventListener("click", onA1Click);
+      });
+  
+      destroyAnyNodes();
+  
+      pendingUpdate = false;
+    }
+
+    // Event handler for 'click' event on a-1
+    function onA1Click(event) {
+      var prediction = "{{ prediction }}";
+      var searchResult = String(prediction);
+      var searchUrl = "https://www.google.com/search?q=" + searchResult;
+      window.open(searchUrl, '_blank');
+    }
+
+    // Update with initial state on first load
+    update();
+  })();
+</script>

@@ -1,0 +1,181 @@
+<head>
+  <title>SkinCheck</title>
+</head>
+<div class="div">
+  <div class="div-2">SkinCheck</div>
+  <div class="div-3">
+    <div class="an-ai-powered-skin-cancer-dete">
+      An AI-Powered Skin Cancer Classification
+    </div>
+    <button class="add-image" data-el="add-image">Add Image</button>
+  </div>
+</div>
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .div {
+    display: flex;
+    flex-direction: column;
+    max-width: 1728px;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .div-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(217, 217, 217, 1);
+    align-items: flex-start;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    align-self: stretch;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    color: rgba(0, 0, 0, 1);
+    font-size: 32px;
+    letter-spacing: 0%;
+    text-align: left;
+    font-family: "Product Sans", sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-2 {
+      width: 100vw;
+    }
+  }
+  .div-3 {
+    display: flex;
+    flex-direction: column;
+    max-width: 928px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 90px;
+  }
+  .an-ai-powered-skin-cancer-dete {
+    max-width: 928px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 80px;
+    letter-spacing: 0%;
+    text-align: center;
+    font-family: "Product Sans", sans-serif;
+  }
+  @media (max-width: 991px) {
+    .an-ai-powered-skin-cancer-dete {
+      padding-right: 20px;
+      padding-left: 20px;
+      font-size: 60px;
+    }
+  }
+  @media (max-width: 640px) {
+    .an-ai-powered-skin-cancer-dete {
+      font-size: 40px;
+    }
+  }
+  .add-image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 83px;
+    appearance: none;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    padding-left: 118px;
+    padding-right: 38px;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    width: auto;
+    height: auto;
+    max-width: 360px;
+    font-size: 42px;
+    letter-spacing: 0px;
+    font-family: "Product Sans", sans-serif;
+    background-image: url(https://cdn.builder.io/api/v1/image/assets%2F48ddba69298e4bfea24c8cf75df5fb5f%2F567fc63d3edf4001bc39873beb137e86);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 38px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+  }
+  .add-image:hover {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 1);
+  }
+  @media (max-width: 640px) {
+    .add-image {
+      padding-top: 25px;
+      padding-left: 82px;
+      padding-bottom: 25px;
+      padding-right: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 30px;
+      background-size: 49px;
+      background-position-x: 20px;
+      text-align: left;
+    }
+  }
+</style>
+<script>
+  (() => {
+    const state = {};
+
+    let context = null;
+    let nodesToDestroy = [];
+    let pendingUpdate = false;
+
+    function destroyAnyNodes() {
+      // destroy current view template refs before rendering again
+      nodesToDestroy.forEach((el) => el.remove());
+      nodesToDestroy = [];
+    }
+
+    // Function to update data bindings and loops
+    // call update() when you mutate state and need the updates to reflect
+    // in the dom
+    function update() {
+      if (pendingUpdate === true) {
+        return;
+      }
+      pendingUpdate = true;
+
+      document.querySelectorAll("[data-el='add-image']").forEach((el) => {
+        el.removeEventListener("click", onAddImageClick);
+        el.addEventListener("click", onAddImageClick);
+
+        el.setAttribute("openLinkInNewTab", false);
+      });
+
+      destroyAnyNodes();
+
+      pendingUpdate = false;
+    }
+
+    // Event handler for 'click' event on add-image
+    function onAddImageClick(event) {
+      const imageInput = document.createElement('input');
+      imageInput.name = 'skinImage';
+      imageInput.type = 'file';
+      imageInput.accept = "image/*";
+      const form = document.createElement("form");
+      form.method = 'post';
+      form.enctype = 'multipart/form-data';
+      form.action = '/prediction';
+      form.appendChild(imageInput);
+      document.body.appendChild(form).style.visibility = "hidden";
+      imageInput.click();
+      imageInput.onchange = function (event) {
+        form.submit();
+      }
+    }
+
+    // Update with initial state on first load
+    update();
+  })();
+</script>
