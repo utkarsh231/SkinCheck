@@ -1,6 +1,6 @@
 # SkinCheck
 
-**🔗The website is live [here](https://skincheck.onrender.com/) **
+**🔗The website is live ** [here](https://skincheck.onrender.com/) **
 
 ✔️Cancer is a prevalent cause of mortality worldwide, with skin cancer surpassing all other cancer types combined in terms of new diagnoses in the United States. 
 However, a significant portion of the population remains unaware of the disease and its implications. This project aims to address this issue by introducing a 
