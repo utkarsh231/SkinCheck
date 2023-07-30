@@ -8,7 +8,7 @@ user-friendly graphical user interface (GUI) that enables individuals of all age
 of this research is to develop innovative methodologies that allow individuals, particularly those with limited resources and medical knowledge, to gain insight 
 into skin cancer diseases. By providing accessible technologies, this research endeavors to raise awareness and understanding of skin cancer among the general
 population, ultimately contributing to the betterment of society.
-
+NOTE:- It is a SkinCancer Classification tool (not a detection tool) with an accuracy of 87.89%
 
 ## 🔸Problem Defeinition:-
 The project focuses on the utilization of advanced deep learning techniques to develop an application capable of accurately classifying 
@@ -87,5 +87,6 @@ accessible to every age group of people was intended. The web app will also prov
 information on all type of skin cancer to increase awareness. 
 
 
-NOTE:- It is a SkinCancer Classification tool (not a detection tool) with an accuracy of 87.89%
+## 🔸Preliminary User Manual:-
 
+![alt text](https://github.com/utkarsh231/SkinCheck/blob/main/static/images/homepage.png)
