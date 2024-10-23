@@ -2,6 +2,8 @@
 
 🔗The website is live [here](https://skincheck.onrender.com/)
 
+Research Paper: [here](https://ieeexplore.ieee.org/abstract/document/10404940)
+
 ✔️Cancer is a prevalent cause of mortality worldwide, with skin cancer surpassing all other cancer types combined in terms of new diagnoses in the United States. 
 However, a significant portion of the population remains unaware of the disease and its implications. This project aims to address this issue by introducing a 
 user-friendly graphical user interface (GUI) that enables individuals of all age groups to detect and classify different types of cancer. The primary objective 
